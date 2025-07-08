@@ -19,6 +19,7 @@ import { useAuthStore } from './store/authStore';
 import { supabase } from './lib/supabase';
 import { InstallPWA } from './components/InstallPWA';
 import { useAnalytics } from './hooks/useAnalytics';
+import Footer from './components/Footer';
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
   const user = useAuthStore((state) => state.user);
@@ -134,6 +135,7 @@ function App() {
             }
           />
         </Routes>
+       <Footer />
         <InstallPWA />
       </div>
     </Router>
